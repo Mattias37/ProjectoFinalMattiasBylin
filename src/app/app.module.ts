@@ -10,6 +10,11 @@ import { CatalogComponent } from './home/catalog/catalog.component';
 import { CartComponent } from './home/cart/cart.component';
 import { FilterPipe } from './filter.pipe';
 
+//Firebase
+import { AngularFireModule } from "@angular/fire";
+import { environment } from "../environments/environment";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +27,10 @@ import { FilterPipe } from './filter.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

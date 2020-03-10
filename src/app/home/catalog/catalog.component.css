@@ -3,3 +3,7 @@
   width: 242px !important;
   height: 200px !important;
 }
+.catalogListDiv{
+  overflow-y: auto;
+  height: 75vh
+}

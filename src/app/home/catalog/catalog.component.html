@@ -1,3 +1,12 @@
+<div class="row">
+  <div class="col-sm-9">
+    <h2>Catalogo de productos</h2>
+  </div>
+  <div class="col-sm-3">
+    <p>Que estas buscando?</p>
+    <input type="search" class="searchbox-input" placeholder="Buscar producto"/>
+  </div>
+</div>
 <div class="row card-group catalogListDiv">
   <div class="col-lg-3 col-md-6" *ngFor="let product of products | async">
     <div class="thumbnail">

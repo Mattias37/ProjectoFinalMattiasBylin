@@ -14,6 +14,7 @@ import { FilterPipe } from './filter.pipe';
 import { AngularFireModule } from "@angular/fire";
 import { environment } from "../environments/environment";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuth } from "@angular/fire/auth";
 
 @NgModule({
   declarations: [
@@ -29,10 +30,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    
     AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

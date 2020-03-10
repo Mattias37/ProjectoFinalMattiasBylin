@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from "../../data.service";
+import { Observable } from 'rxjs';
+import 'firebase/firestore';
 
 @Component({
   selector: 'app-catalog',
@@ -6,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
-
-  constructor() { }
+  products: Observable<any[]>;
+  constructor( private dataService: DataService) {
+    this.products = this.dataService.items;
+  }
 
   ngOnInit() {
   }

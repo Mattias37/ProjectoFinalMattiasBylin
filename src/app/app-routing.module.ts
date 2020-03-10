@@ -15,6 +15,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'catalogP', pathMatch: 'full'},
     {path: 'catalogP', component: CatalogComponent},
     {path: 'shopping-cart', component: CartComponent},
+    {path: 'login', component: LoginComponent},
     {path: 'product/:index', component: ProductComponent}
   ]}
 ];

@@ -1,15 +1,8 @@
-<p>catalog works!</p>
-<div class="" *ngFor="let product of products | async">
-  <ul>
-    <li>{{product.Nombre}}</li>
-  </ul>
-</div>
-
 <div class="row card-group catalogListDiv">
   <div class="col-lg-3 col-md-6" *ngFor="let product of products | async">
     <div class="thumbnail">
       <div class="caption text-left">
-        <span>{{product.Nombre}}</span>
+        <img class="cardImg" [src]="product.img" alt="Card image cap">
         <h3 class="card-title">{{product.Nombre}}</h3>
         <p><strong>Precio:</strong>{{product.Precio}}</p>
         <p><strong>Unidades disponibles:</strong><span id="unidadDisponible-{{product.index}}">{{product.Disponibilidad}}</span></p>

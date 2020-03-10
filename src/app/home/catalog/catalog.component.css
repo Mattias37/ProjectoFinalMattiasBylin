@@ -1,0 +1,5 @@
+.cardImg{
+  object-fit: scaleDown !important;
+  width: 242px !important;
+  height: 200px !important;
+}

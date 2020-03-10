@@ -1,0 +1,24 @@
+.container{
+  display: table;
+  margin: auto;
+  height: 100vh;
+  width: auto;
+}
+.body{
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+}
+.error{
+    border: 1px solid red;
+    border-radius: 15px;
+    color: red;
+}
+.image-login{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/login-fondo.jpg');
+}
+input{
+  width:100%;
+  border-radius: 15px;
+}

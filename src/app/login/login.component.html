@@ -1,18 +1,19 @@
-<div class="container">
+<div class="container image-login">
   <div class="body">
     <div class="col-sm-6 col-sm-offset-3">
       <h3 class="text-center">Login</h3>
       <form>
         <div class="form-group">
-          <label for="email-input">Correo Electrónico</label>
-          <input type="email" #email id="email-input" placeholder="mattiasbylin@hotmail.com" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+          <label for="email-input">Correo Electrónico</label><br>
+          <input type="email" #email id="email-input" placeholder="mattiasbylin37@gmail.com" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
         </div>
         <div class="form-group">
-          <label for="password-input">Correo Electrónico</label>
+          <label for="password-input">Correo Electrónico</label><br>
           <input type="password" #password id="password-input" placeholder="123456789" required>
-          <label for="" class="error" *ngIf="errorLogin">Algo no cuadra bien, vuelvelo a intentar porfavor!</label>
-          <button class="btn btn-success center-block" type="button" (click)="login(email.value, password.value)">Ingresar</button>
         </div>
+
+        <label for="" class="error" *ngIf="errorLogin">Algo no cuadra bien, vuelvelo a intentar porfavor!</label>
+        <button class="btn btn-success center-block" type="button" (click)="login(email.value, password.value)">Ingresar</button>
       </form>
     </div>
   </div>

@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     this.afa.auth.signInWithEmailAndPassword(email, password)
     .then(()=>{
       console.log("Victory");
+      this.router.navigateByUrl('/home');
     }).catch((error) => {
       this.errorLogin = true;
     })

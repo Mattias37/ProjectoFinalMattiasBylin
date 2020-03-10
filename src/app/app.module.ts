@@ -9,12 +9,14 @@ import { ProductComponent } from './home/product/product.component';
 import { CatalogComponent } from './home/catalog/catalog.component';
 import { CartComponent } from './home/cart/cart.component';
 import { FilterPipe } from './filter.pipe';
+import { HomeComponent } from './home/home.component';
 
 //Firebase
 import { AngularFireModule } from "@angular/fire";
 import { environment } from "../environments/environment";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuth } from "@angular/fire/auth";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AngularFireAuth } from "@angular/fire/auth";
     ProductComponent,
     CatalogComponent,
     CartComponent,
-    FilterPipe
+    FilterPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -4,11 +4,11 @@
   </div>
   <div class="col-sm-3">
     <p>Que estas buscando?</p>
-    <input type="search" class="searchbox-input" placeholder="Buscar producto"/>
+    <input type="search" class="searchbox-input" placeholder="Buscar producto" [(ngModel)]="searchText"/>
   </div>
 </div>
 <div class="row card-group catalogListDiv">
-  <div class="col-lg-3 col-md-6" *ngFor="let product of products | async">
+  <div class="col-lg-3 col-md-6" *ngFor="let product of products | async | filter : 'Nombre' : searchText">
     <div class="thumbnail">
       <div class="caption text-left">
         <img class="cardImg" [src]="product.img" alt="Card image cap">

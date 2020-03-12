@@ -29,7 +29,7 @@ export class CatalogComponent implements OnInit {
     // se envia al servicio los productos anhadidos, se calcula subtotal
     this.subtotal = product.Precio * quantity;
     this.stock = product.Disponibilidad - quantity;
-    document.getElementById("unidadDisponible-"+product.index).innerHTML = String(Number(this.stock));
+    document.getElementById("unidadDisponible-"+product.Disponibilidad).innerHTML = String(Number(this.stock));
 
     this.productJSON = {
       product : product,

@@ -33,12 +33,10 @@ export class DataService {
     for(let i=0; i<shoppingCartJSON.length; i++){
       let index = shoppingCartJSON[i].product.Nombre;
       let stock = shoppingCartJSON[i].product.Disponibilidad - shoppingCartJSON[i].quantity;
-      let data = {
-        Stock : stock
-      }
+
       console.log(index);
       console.log(stock);
-      this.afs.collection(`productos`).doc(index).set(data).then(console.log("Exito"));
+      this.afs.collection(`productos`).doc(index).update({Disponibilidad: stock}).then(()=>console.log("Exito"));
           this.shoppingCartArray = [];
           this.shoppingCartTotal = 0;
           document.getElementById("badge").innerHTML  = '';

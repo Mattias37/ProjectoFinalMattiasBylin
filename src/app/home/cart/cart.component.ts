@@ -18,7 +18,6 @@ export class CartComponent implements OnInit {
   //Se invoca al servicio para la actualizacion stock de los productos
   updateProductsStock(){
     this.dataService.updateProductsStock(this.shoppingCartJSON);
-    
   }
 
 }

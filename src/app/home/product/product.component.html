@@ -1,5 +1,5 @@
-<p>product works!</p>
-<div class="card-producto"  class="">
+
+<div class="card-producto" *ngFor="let product of products | async | filter : 'Nombre' : searchf" class="">
 
   <div class="row">
     <h2>{{product.Nombre}}</h2>

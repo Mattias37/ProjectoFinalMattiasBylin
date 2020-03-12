@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../../data.service";
-import { Observable } from 'rxjs';
 import 'firebase/firestore';
 import { ActivatedRoute } from "@angular/router";
+import { Observable } from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-product',
@@ -10,16 +11,12 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  product:any = undefined;
-  index:any = undefined;
+  products: Observable<any[]>;
+  searchf = String;
   constructor(private dataService: DataService,
               private route: ActivatedRoute) {
-    route.params.subscribe( parametros => {
-      dataService.items( parametros['index'])
-      .subscribe( res => {
-        this.product = res.json();
-      })
-    })
+      this.products = this.dataService.items;
+      this.route.params.subscribe( params => this.searchf = params.index);
    }
 
   ngOnInit() {

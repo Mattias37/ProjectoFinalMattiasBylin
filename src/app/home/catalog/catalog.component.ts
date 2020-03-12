@@ -10,11 +10,13 @@ import 'firebase/firestore';
 })
 export class CatalogComponent implements OnInit {
   products: Observable<any[]>;
+  private productsQuantity:any = '';
   constructor( private dataService: DataService) {
     this.products = this.dataService.items;
   }
 
   ngOnInit() {
   }
+
 
 }

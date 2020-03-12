@@ -14,4 +14,8 @@ export class DataService {
     this.items = afs.collection('productos').valueChanges();
 
   }
+  getProducto(index:string){
+    return this.afs.collection(`productos/${ index }.json`);
+    console.log(`productos/${ index }.json`)
+  }
 }

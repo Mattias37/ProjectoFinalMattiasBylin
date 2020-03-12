@@ -17,6 +17,14 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit() {
   }
+  addProductToShoppingCart(product, quantity){
 
+    // Se muestra la cantidad de productos anhadidos sobre el icon del carrito
+    this.productsQuantity = document.getElementById('badge').textContent;
+    document.getElementById("badge").innerHTML  = String(Number(this.productsQuantity) + 1);
+
+
+
+  }
 
 }

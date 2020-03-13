@@ -31,12 +31,12 @@ export class DataService {
   }
   updateProductsStock(shoppingCartJSON){
     for(let i=0; i<shoppingCartJSON.length; i++){
-      let index = shoppingCartJSON[i].product.Nombre;
+      let id = shoppingCartJSON[i].product.Nombre;
       let stock = shoppingCartJSON[i].product.Disponibilidad - shoppingCartJSON[i].quantity;
 
-      console.log(index);
+      console.log(id);
       console.log(stock);
-      this.afs.collection(`productos`).doc(index).update({Disponibilidad: stock}).then(()=>console.log("Exito"));
+      this.afs.collection(`productos`).doc(id).update({Disponibilidad: stock}).then(()=>console.log("Exito"));
           this.shoppingCartArray = [];
           this.shoppingCartTotal = 0;
           document.getElementById("badge").innerHTML  = '';

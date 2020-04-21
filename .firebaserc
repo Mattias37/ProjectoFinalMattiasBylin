@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tienda-c3231": {
+      "hosting": {
+        "ProjectoFinalMattiasBylin": [
+          "tienda-c3231"
+        ]
+      }
+    }
+  }
+}

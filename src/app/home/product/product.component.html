@@ -1,0 +1,20 @@
+
+<div class="card-producto" *ngFor="let product of products | async | filter : 'Nombre' : searchf" class="">
+
+  <div class="row">
+    <h2>{{product.Nombre}}</h2>
+  </div>
+
+  <div class="row">
+    <span id="productId" class="hidden">{{product.nombre}}</span>
+    <div class="col-sm-6 col-image">
+      <img class="productImg" [src]="product.img" alt="Card image cap">
+      <a class="btn btn-default" routerLink="/home/catalogP">Atras</a>
+    </div>
+    <div class="col-sm-6">
+      <p class=""><strong>Precio:</strong>{{product.Precio}}</p>
+      <p class=""><strong>Unidades disponibles:</strong>{{product.Disponibilidad}}</p>
+    </div>
+  </div>
+
+</div>
